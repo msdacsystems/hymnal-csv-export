@@ -1,0 +1,6 @@
+/node_modules
+
+*.lockb
+*.csv
+*.exe
+data.json
