@@ -3,4 +3,7 @@
 *.lockb
 *.csv
 *.exe
+*.zip
+
+schema.json
 data.json
