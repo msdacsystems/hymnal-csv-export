@@ -1,4 +1,5 @@
 /node_modules
+/private
 
 *.lockb
 *.csv
@@ -6,4 +7,3 @@
 *.zip
 
 schema.json
-data.json
