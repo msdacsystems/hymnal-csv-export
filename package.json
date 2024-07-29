@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "b": "bun build src/exporter.ts --minify --compile --outfile dist/exporter"
+  },
   "devDependencies": {
     "@types/node": "^20.14.9"
   },
