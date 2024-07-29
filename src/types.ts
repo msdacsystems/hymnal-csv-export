@@ -3,7 +3,7 @@
  */
 export interface MongoData {
   _id: string;
-  PACKAGE: Package;
+  PACKAGE: MongoPackage;
   _hostname: string;
   _initiated: Timestamp;
   _username: string;
@@ -14,12 +14,12 @@ export interface MongoData {
   usageSince: Timestamp;
 }
 
-export interface Package {
-  hymnal: Hymnal;
+export interface MongoPackage {
+  hymnal: MongoHymnalBrowserData;
 }
 
-export interface Hymnal {
-  DATA: HymnDataRaw;
+export interface MongoHymnalBrowserData {
+  DATA: MongoHymnData;
   __CHECKSUM__: string;
   __DATECREATED: Timestamp;
   __FILETYPE__: string;
@@ -28,11 +28,11 @@ export interface Hymnal {
 /**
  *  The individual hymn data
  */
-export interface HymnDataRaw {
-  [key: string]: Datum[];
+export interface MongoHymnData {
+  [key: string]: MongoDatum[];
 }
 
-export interface Datum {
+export interface MongoDatum {
   $numberInt?: string;
   $numberDouble?: string;
 }
@@ -53,4 +53,14 @@ export interface HymnData {
   queries: string;
   launches: string;
   lastAccessed: string;
+}
+
+export interface HymnalBrowserData {
+  DATA: HymnDataRaw;
+  __CHECKSUM__: string;
+  __DATECREATED: Timestamp;
+  __FILETYPE__: string;
+}
+export interface HymnDataRaw {
+  [key: string]: number[];
 }
