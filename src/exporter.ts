@@ -136,7 +136,7 @@ program
 
       const hymnalData = parsed.PACKAGE.hymnal.DATA as MongoHymnData;
       const mappedData = getMappedData(hymnalData);
-      dumpToCSV(mappedData, output, sort);
+      dumpToCSV(mappedData, output, sort ?? true);
     },
   );
 
