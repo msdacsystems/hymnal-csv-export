@@ -12,16 +12,13 @@ A CLI for exporting MongoDB data from the [Hymnal Browser](https://github.com/ms
 - `-i` `--input`: The input file path. Must be a valid MongoDB JSON file.
 - `--o` `--output`: The output file path. Default is `output.csv`.
 - `-s` `--sort`: Sort by ID. Default is `False`.
+- `-r` `--raw`: Use a raw data format. Default is `False`.
 
 ## Building from source
 
 1. Clone the repository
 2. Install the required dependencies using `bun i`
-3. To build an executable, run the following command:
-
-```bash
-bun build src/exporter.ts --minify --compile --outfile dist/exporter
-```
+3. To build an executable, run `bun b`
 
 See the [Bundler documentation](https://bun.sh/docs/bundler/executables) for more information.
 
